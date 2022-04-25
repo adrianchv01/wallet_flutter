@@ -11,17 +11,37 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xff101018),
-      body: Column(
-        children: [
-          //App Bar
-          Row(children: [Text('Digital Wallet')],)
+      backgroundColor: const Color(0xff2E3148),
+      body: SafeArea(
+        child: Column(children: [
+            //App Bar
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 24.0,vertical:25.0),
+              child:  Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: const [
+                   Text('Digital Wallet',
+                   style: TextStyle(color: Colors.white,
+                   fontSize: 24.0,
+                   fontFamily: 'avenir'
+                   ),
+                   ),
+                   
+                   Icon(Icons.add,
+                   color: Colors.white),
+                   
+                   ],
 
-          //Cards
-
-
-
-        ],
+              
+              ),
+            )
+      
+            //Cards
+      
+      
+      
+          ],
+        ),
       ),
 
     );
