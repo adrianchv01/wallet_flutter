@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:wallet/util/my_card.dart';
 
 class HomePage extends StatefulWidget {
   HomePage({Key? key}) : super(key: key);
@@ -13,37 +14,33 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       backgroundColor: const Color(0xff2E3148),
       body: SafeArea(
-        child: Column(children: [
+        child: Column(
+          children: [
             //App Bar
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 24.0,vertical:25.0),
-              child:  Row(
+              padding:
+                  const EdgeInsets.symmetric(horizontal: 24.0, vertical: 25.0),
+              child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: const [
-                   Text('Digital Wallet',
-                   style: TextStyle(color: Colors.white,
-                   fontSize: 24.0,
-                   fontFamily: 'avenir'
-                   ),
-                   ),
-                   
-                   Icon(Icons.add,
-                   color: Colors.white),
-                   
-                   ],
-
-              
+                  Text(
+                    'Digital Wallet',
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 24.0,
+                        fontFamily: 'avenir'),
+                  ),
+                  Icon(Icons.add, color: Colors.white),
+                ],
               ),
-            )
-      
-            //Cards
-      
-      
-      
+            ),
+            SizedBox(height: 25),
+
+            //Cards------------------------------------------------
+            MyCard(),
           ],
         ),
       ),
-
     );
   }
 }
