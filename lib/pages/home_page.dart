@@ -34,9 +34,11 @@ class _HomePageState extends State<HomePage> {
                 ],
               ),
             ),
+            // ignore: prefer_const_constructors
             SizedBox(height: 25),
 
             //Cards------------------------------------------------
+            // ignore: prefer_const_constructors
             MyCard(),
           ],
         ),
