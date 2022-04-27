@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:wallet/util/my_balance.dart';
 import 'package:wallet/util/my_card.dart';
 
 class HomePage extends StatefulWidget {
@@ -35,11 +36,13 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
             // ignore: prefer_const_constructors
-            SizedBox(height: 25),
+            SizedBox(height: 15),
 
             //Cards------------------------------------------------
             // ignore: prefer_const_constructors
             MyCard(),
+            SizedBox(height: 15),
+            MyBalance()
           ],
         ),
       ),
