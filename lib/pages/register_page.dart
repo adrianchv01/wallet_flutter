@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:url_launcher/url_launcher.dart';
-import 'package:wallet/pages/register_page.dart';
-
-class LoginPage extends StatelessWidget {
-  const LoginPage({Key? key}) : super(key: key);
+import 'package:wallet/pages/login_page.dart';
 
 
-  
+class RegisterPage extends StatelessWidget {
+  const RegisterPage({Key? key}) : super(key: key);
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color(0xff2E3148),
@@ -19,7 +18,7 @@ class LoginPage extends StatelessWidget {
               Image.asset('lib/icons/wallet1.png',),
               SizedBox(height: 20),
               //hello again
-              Text('Hello again!',
+              Text('Wellcome!',
                   style:GoogleFonts.bebasNeue(
                     fontSize:52,
                     color: Colors.white
@@ -72,6 +71,30 @@ class LoginPage extends StatelessWidget {
                 ),
               ),
 
+              SizedBox(height: 10),
+
+              //CONFRIM PASSWPORD
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 25),
+                child: Container(
+                  decoration: BoxDecoration(
+                      color: Color(0xff1B1D2F),
+                      borderRadius: BorderRadius.circular(12)),
+                  child: const Padding(
+                    padding: EdgeInsets.only(left: 20.0),
+                    child: TextField(
+                        cursorColor: Color(0xff7569FF),
+                        obscureText: true,
+                        style: TextStyle(color: Colors.white),
+                        decoration: InputDecoration(
+                            border: InputBorder.none,
+                            hintText: 'Confirm Password',
+                            hintStyle: TextStyle(color: Color(0xffC5D0EC)),
+                            helperStyle: TextStyle(color: Color(0xffC5D0EC)))),
+                  ),
+                ),
+              ),
+
               SizedBox(height: 15),
 
               //sig in
@@ -87,7 +110,7 @@ class LoginPage extends StatelessWidget {
                     borderRadius: BorderRadius.circular(12),
                   ),
                   child: Center(
-                    child: Text('Sign in',
+                    child: Text('Create Account',
                     style: TextStyle(fontFamily:'avenir',
                     color: Colors.white, 
                     fontSize:18,
@@ -96,26 +119,27 @@ class LoginPage extends StatelessWidget {
                 ),
               ),
               SizedBox(height:15),
+              
               //Register now
 
               Row(  
                 mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text('Not a member? ',
+                    Text('I\'m already a member ',
                     style: TextStyle(
                       color: Color(0xffC5D0EC),
                       fontWeight: FontWeight.bold
                     ),),
                     Center(
                       child: TextButton(
-                        child: Text('Register now',
+                        child: Text('Login now',
                         style:TextStyle(
                           color: Color(0xff7569FF),
                           fontWeight: FontWeight.bold
                         )
                         ),
                         onPressed: (){
-                          Navigator.push(context, MaterialPageRoute(builder: (context)=>RegisterPage()));
+                          Navigator.pop(context);
                         },
                       ),
                     ),
@@ -132,10 +156,5 @@ class LoginPage extends StatelessWidget {
       ),
     );
   }
-
- 
-  
-   
-
 
 }
