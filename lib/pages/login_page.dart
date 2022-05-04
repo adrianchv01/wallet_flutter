@@ -115,7 +115,11 @@ class LoginPage extends StatelessWidget {
                         )
                         ),
                         onPressed: (){
-                          Navigator.push(context, MaterialPageRoute(builder: (context)=>RegisterPage()));
+                         // Navigator.push(context, MaterialPageRoute(builder: (context)=>RegisterPage()));
+                         Navigator.pushReplacement(context,
+                         PageRouteBuilder(pageBuilder:(context, animation1, animation2)=>RegisterPage(),
+                         transitionDuration: Duration.zero,
+                         reverseTransitionDuration: Duration.zero,) );
                         },
                       ),
                     ),

@@ -139,7 +139,10 @@ class RegisterPage extends StatelessWidget {
                         )
                         ),
                         onPressed: (){
-                          Navigator.pop(context);
+                          Navigator.pushReplacement(context,
+                         PageRouteBuilder(pageBuilder:(context, animation1, animation2)=>LoginPage(),
+                         transitionDuration: Duration.zero,
+                         reverseTransitionDuration: Duration.zero,) );
                         },
                       ),
                     ),
