@@ -121,7 +121,7 @@ class RegisterPage extends StatelessWidget {
               ),
               SizedBox(height:15),
               
-              //Register now
+              //Login
 
               Row(  
                 mainAxisAlignment: MainAxisAlignment.center,

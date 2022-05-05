@@ -26,8 +26,10 @@ class LoginPage extends StatelessWidget {
                   ),
               ),
               SizedBox(height: 30),
+
               
               //email textfield
+
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 25),
                 child: Container(
@@ -51,6 +53,7 @@ class LoginPage extends StatelessWidget {
               SizedBox(height: 10),
 
               //Password textfield
+
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 25),
                 child: Container(
@@ -72,9 +75,10 @@ class LoginPage extends StatelessWidget {
                 ),
               ),
 
-              SizedBox(height: 15),
+              const SizedBox(height: 15),
 
               //sig in
+
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal:60.0),
                 child: Container(
@@ -95,7 +99,8 @@ class LoginPage extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(height:15),
+              const SizedBox(height:15),
+              
               //Register now
 
               Row(  
