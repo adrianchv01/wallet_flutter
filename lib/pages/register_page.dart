@@ -16,7 +16,7 @@ class RegisterPage extends StatelessWidget {
             mainAxisAlignment:MainAxisAlignment.center,
             children: [
               Image.asset('lib/icons/wallet1.png',),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               //hello again
               Text('Wellcome!',
                   style:GoogleFonts.bebasNeue(
@@ -24,7 +24,7 @@ class RegisterPage extends StatelessWidget {
                     color: Colors.white
                   ),
               ),
-              SizedBox(height: 30),
+              const SizedBox(height: 30),
               
               //email textfield
               Padding(
@@ -94,8 +94,9 @@ class RegisterPage extends StatelessWidget {
                   ),
                 ),
               ),
+              
 
-              SizedBox(height: 15),
+              const SizedBox(height: 15),
 
               //sig in
               Padding(
